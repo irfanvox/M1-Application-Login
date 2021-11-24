@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 
-#define ESC27
+#define ESC 27
 #define F1 59
 #define F2 60
 
@@ -72,7 +72,8 @@ void login()
     char username[20];
     char pass[20];
     char chkp;
-
+    char chku;
+    
     clrscr();
     gotoxy(23,5);
     printf("---------------Login---------------");
@@ -90,7 +91,7 @@ void login()
         pass[i]=c;
         printf("*");
     }
-    pass[i]="\0";
+    pass[i]='\0';
 
     while (!feof(fp))
     {
